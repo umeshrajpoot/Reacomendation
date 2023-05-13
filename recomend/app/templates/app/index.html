@@ -1,0 +1,155 @@
+<!--
+Author: Colorlib
+Author URL: https://colorlib.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Recomendation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="{% static '/css/style.css'%}" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- //web font -->
+<style>
+	#first{
+		width:10%;
+		hight:10%;
+		float:right;
+		margin-right:300px;
+		background-color:pink;
+		text-align:center;
+        }
+	#second{
+		width:10%;
+		hight:10%;
+		float:right;
+		margin-right:10px;
+		background-color:white;
+		text-align:center;
+        }
+	#third{
+		width:10%;
+		hight:10%;
+		float:right;
+		margin-right:10px;
+		background-color:white;
+		text-align:center;
+      }
+     #forth{
+		width:10%;
+		hight:10%;
+		float:right;
+		margin-right:10px;
+		background-color:white;
+		text-align:center;
+	 }
+	 #five{
+		width:10%;
+		hight:10%;
+		float:right;
+		margin-right:10px;
+		background-color:white;
+		text-align:center;
+	 }
+	 h2{
+		color:green;
+	 }
+	 img{
+		height:150px;
+		width:100px;
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:auto;
+
+	 }
+	 
+</style>
+</head>
+<body>
+	<!-- main -->
+	<div class="main-w3layouts wrapper">
+		<h1>BOOK RECOMENDATION SYSTEM</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="#" method="post" name='book' aria-label='Default select example'>
+                    {%csrf_token%}
+                    <select name='book' style="margin-left:70px; width:250px; height:30px;">
+					<option>select book:</option>
+                    {%for i in bookname%}
+                    <option value='{{i}}'>{{i}}</option>
+                    {%endfor%}
+					
+					<input type="submit" value="SUBMIT">
+					<p class="lg:w 2/3 mx-auto leading-relaxed text-based">A Book recomendation system,
+						or a book recomender system, 
+						is ML-based approach to filtering or predicting the users'book prefrence based 
+						on their past choices and behavior.<br>It's an advanced filtration 
+						machanism that predicts 
+						the possiblebook choices of the concerned users</br></p>
+                    </select>
+				</form>
+			</div>
+		</div>
+<!--<section class="text-gray-600 body-font" style="margin-top:-180px;">-->
+	<section class="container">
+	<h3><center><b>RECOMENDED BOOK</b></center></h3>
+   
+      
+		<div class="img1" id="first">
+			<img class="h-30 rounded w-full object-cover object-center mb-6" src="{{img0}}">
+			<h2>Book Name:</h2>
+		    <h5>{{bk0}}</h5>
+		</div>
+		<div class="img1" id="second">
+			<img class="h-30 rounded w-full object-cover object-center mb-6" src="{{img1}}" all="content">
+		    <h2>Book Name:</h2>
+			<h5>{{bk1}}</h5>
+			
+		</div>
+
+		<div class="img1" id="third">
+			<img class="h-30 rounded w-full object-cover object-center mb-6" src="{{img2}}" all="content">
+		    <h2>Book Name:</h2>
+			<p>{{bk2}}</p>
+		</div>
+       
+		<div class="img1" id="forth">
+			<img class="h-30 rounded w-full object-cover object-center mb-6" src="{{img3}}" all="content">
+		    <h2>Book Name:</h2>
+			<h5>{{bk3}}</h5>
+		</div>
+
+		<div class="img1" id="five">
+			<img class="h-30 rounded w-full object-cover object-center mb-6" src="{{img4}}" all="content">
+		    <h2>Book Name:</h2>
+			<h5>{{bk4}}</h5>
+		</div>
+
+</section>
+		
+	<div>
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- //main -->
+</body>
+</html>
