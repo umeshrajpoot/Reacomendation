@@ -1,1 +1,25 @@
-
+{
+  "version":2,
+  "builds":[
+    {
+      "src":"poll/wsgi.py",
+      "use":"@vercel/python",
+      "config":{"maxlambdaSize":"15mb","runtime":"pyhton2.7"}
+    },
+    {
+      "src":"builds_file.sh",
+      "use":"@vercel/static-build",
+      "config":{"distdir":"staticfiles_build"}
+    }
+  ],
+  "routes":[
+    {
+      "src:":"/static/(.*)",
+      "dest":"static/$1"
+    },
+    {
+      "src":"/(.*)",
+      "dest":"poll/wsgi.py"
+    }
+  ]
+}
