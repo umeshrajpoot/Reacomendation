@@ -2,7 +2,7 @@
   "version":2,
   "builds":[
     {
-      "src":"poll/wsgi.py",
+      "src":"pro/wsgi.py",
       "use":"@vercel/python",
       "config":{"maxlambdaSize":"15mb","runtime":"pyhton2.7"}
     },
@@ -19,7 +19,7 @@
     },
     {
       "src":"/(.*)",
-      "dest":"poll/wsgi.py"
+      "dest":"pro/wsgi.py"
     }
   ]
 }
